@@ -24,7 +24,7 @@ yarn add @awkravchuk/react-audio-recorder
 | Property name   | Type   | Default            | Description                           |
 | --------------- | ------ | ------------------ | ------------------------------------- |
 | status          | string | RECORD_STATUS.IDLE | RECORD_STATUS.(IDLE,RECORDING,PAUSED) |
-| audioResult     | string | -                  | Result blob url.                      |
+| audioResult     | string | -                  | Result blob.                          |
 | errorMessage    | string | -                  | Error messages.                       |
 | timer           | number | -                  | Record timer (in secs).               |
 | startRecording  | method | -                  | Call this method to start recording.  |
@@ -54,7 +54,7 @@ class Example extends Component {
           errorMessage
         }) => (
           <div>
-            <audio controls src={audioResult} />
+            <audio controls src={window.URL.createObjectURL(audioResult)} />
             <p>
               Status : <b>{status}</b>
             </p>
@@ -98,7 +98,7 @@ function Example() {
   } = useAudioRecorder()
   return (
     <div>
-      <audio controls src={audioResult} />
+      <audio controls src={window.URL.createObjectURL(audioResult)} />
       <p>
         Status : <b>{status}</b>
       </p>
