@@ -83,7 +83,7 @@ export const useAudioRecorder = () => {
       mediaRecorder.stop()
       mediaRecorder.onstop = () => {
         handleResetTimer()
-        let audioData = new Blob(dataArray.current, { type: 'audio/wav;' })
+        let audioData = new Blob(dataArray.current, { type: 'audio/webm;' })
         dataArray.current = []
         setAudioResult(window.URL.createObjectURL(audioData))
         setStatus(RECORD_STATUS.IDLE)
