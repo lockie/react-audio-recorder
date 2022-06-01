@@ -1,8 +1,9 @@
-# @sarafhbk/react-audio-recorder
+# @awkravchuk/react-audio-recorder
 
-> This is a simple audio recorder package for react application using the javascript [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API).
+This is a simple audio recorder package for react application using the javascript [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API).
+Forked from [@sarafhbk/react-audio-recorder](https://www.npmjs.com/package/@sarafhbk/react-audio-recorder).
 
-[![NPM](https://img.shields.io/npm/v/@sarafhbk/react-audio-recorder.svg)](https://www.npmjs.com/package/@sarafhbk/react-audio-recorder) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/@awkravchuk/react-audio-recorder.svg)](https://www.npmjs.com/package/@awkravchuk/react-audio-recorder) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 # Demo
 
@@ -12,9 +13,9 @@ Checkout the [Demo.](https://sarafhbk.github.io/react-audio-recorder)
 
 ```bash
 
-npm install --save @sarafhbk/react-audio-recorder
+npm install --save @awkravchuk/react-audio-recorder
 
-yarn add @sarafhbk/react-audio-recorder
+yarn add @awkravchuk/react-audio-recorder
 
 ```
 
@@ -36,7 +37,7 @@ yarn add @sarafhbk/react-audio-recorder
 ```tsx
 import React, { Component } from 'react'
 
-import { ReactAudioRecorder } from '@sarafhbk/react-audio-recorder'
+import { ReactAudioRecorder } from '@awkravchuk/react-audio-recorder'
 
 class Example extends Component {
   render() {
@@ -82,7 +83,7 @@ class Example extends Component {
 ```tsx
 import React from 'react'
 
-import { useAudioRecorder } from '@sarafhbk/react-audio-recorder'
+import { useAudioRecorder } from '@awkravchuk/react-audio-recorder'
 
 function Example() {
   const {
