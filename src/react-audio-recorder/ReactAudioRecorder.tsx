@@ -19,7 +19,7 @@ export const ReactAudioRecorder = ({
     pauseRecording: () => void
     resumeRecording: () => void
     status: string
-    audioResult: string
+    audioResult: object
     errorMessage: string
     timer: number
   }) => ReactElement

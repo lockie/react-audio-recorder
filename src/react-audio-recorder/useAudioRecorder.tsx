@@ -14,7 +14,7 @@ export const useAudioRecorder = () => {
   const dataArray = useRef<Array<Blob>>([])
 
   const [status, setStatus] = useState<record_status_type>(RECORD_STATUS.IDLE)
-  const [audioResult, setAudioResult] = useState<string>('')
+  const [audioResult, setAudioResult] = useState<object>(null as any)
   const [errorMessage, setErrorMessage] = useState<string>('')
 
   const {
@@ -85,7 +85,7 @@ export const useAudioRecorder = () => {
         handleResetTimer()
         let audioData = new Blob(dataArray.current, { type: 'audio/webm;' })
         dataArray.current = []
-        setAudioResult(window.URL.createObjectURL(audioData))
+        setAudioResult(audioData)
         setStatus(RECORD_STATUS.IDLE)
         localStream.getAudioTracks().forEach((track: MediaStreamTrack) => {
           track.stop()
